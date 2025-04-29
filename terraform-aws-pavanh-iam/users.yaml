@@ -1,0 +1,63 @@
+developers:
+- username: dev.john
+  fullname: "John Smith"
+  groups:
+  - developers
+  permissions:
+  - AWSCodeCommitPowerUser
+
+- username: dev.pavanh
+  fullname: "pavanh"
+  groups:
+  - developers
+  permissions:
+  - AWSCodeCommitPowerUser
+  - AmazonEC2FullAccess
+
+
+- username: dev.sarah
+  fullname: "Sarah Smith"
+  groups:
+  - developers
+  - senior-developers
+  permissions:
+  - AWSLambda_FullAccess
+
+operations:
+- username: ops.mike
+  fullname: "Mike John"
+  groups:
+  - operations
+  permissions:
+  - AmazonEC2FullAccess
+
+- username: ops.lisa
+  fullname: "Lisa Chen"
+  groups:
+  - operations
+  - security
+  permissions:
+  - CloudWatchFullAccess
+
+groups:
+  developers:
+    policies:
+    - AWSCodeCommitPowerUser
+  senior-developers:
+    policies:
+    - AWSLambda_FullAccess
+  operations:
+    policies:
+    - AmazonEC2FullAccess
+  security:
+    policies:
+    - CloudWatchFullAccess
+
+password_policy:
+  minimum-length: 8
+  require-uppercase: true
+  require-lowercase: true
+  require-numbers: true
+  require-symbols: true
+  max-age-days: 90
+  prevent-reuse: 24
