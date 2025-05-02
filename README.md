@@ -29,7 +29,7 @@ A Terraform module to automate the creation of **IAM Users**, **Groups**, **Poli
 ### Basic Example  
 ```hcl
 module "iam" {
-  source        = "github.com/yourusername/aws-iam-module?ref=v1.0.0"
-  iam_data_file = "path/to/users.yaml"
+  source        = "github.com/Pavanhgowda/terraform-aws-pavanh-iam?ref=v1.0.0"
+  iam_data_file = "./users.yaml"
   region        = "us-east-1"
 }
